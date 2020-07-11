@@ -63,6 +63,9 @@ h2 {
   line-height: 2.5em;
   margin: 0;
 }
+h2.subtitle {
+  clear: both;
+}
 h3 {
   font-size: 1.6em;
   line-height: 1.6em;
@@ -708,6 +711,28 @@ body.co_people.canvas .titleNavContainer {
   top: -2px;
   height: 33px;
 }
+/* SUBNAVIGATION TABS */
+.cm-subnav-tabs {
+  clear: both;
+  margin: 4em 0 1.5em;
+  padding: 1em 0 0;
+}
+.cm-subnav-tabs .mdl-tabs__tab-bar {
+  justify-content: left;
+}
+.cm-subnav-tabs .mdl-tabs__tab {
+  position: relative;
+  top: -1px;
+}
+.cm-subnav-tabs .mdl-tabs__tab.selected {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-bottom: 1px solid #fff;
+}
+.cm-subnav-tabs + form > .form-list,
+.cm-subnav-tabs + .top-search {
+  margin-top: 0;
+}
 /* DASHBOARDS */
 #dashboard-tabs {
   clear: both;
@@ -726,9 +751,9 @@ body.co_people.canvas .titleNavContainer {
   top: -1px;
 }
 #dashboard-tabs .mdl-tabs__tab.selected {
-  background-color: #f8f8f8;
-  border: 1px solid #f2f2f2;
-  border-bottom: none;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-bottom: 1px solid #fff;
 }
 .mini-spinner {
   position: relative;
@@ -1998,7 +2023,8 @@ ul.form-list li.field-stack textarea {
 }
 /* GENERAL */
 .hidden,
-.invisible {
+.invisible,
+.co-dialog {
   display: none;
 }
 p { /* MDL override */
@@ -2107,7 +2133,7 @@ table.common-table td {
   padding: 0.25em 0.25em 0.25em 0.5em;
 }
 th {
-  background-color: #1D7AB4;
+  background-color: #0c75c0;
   color: white;
 }
 th a {
