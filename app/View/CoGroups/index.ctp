@@ -367,7 +367,7 @@
             if($e || $v) {
               print $this->Html->link($c['CoGroup']['name'],
                                       array('controller' => 'co_groups',
-                                            'action' => ($e ? 'members' : ($v ? 'view' : '')), $c['CoGroup']['id']));
+                                            'action' => 'members', $c['CoGroup']['id']));
             } else {
               print filter_var($c['CoGroup']['name'],FILTER_SANITIZE_SPECIAL_CHARS);
             }
@@ -438,7 +438,7 @@
               elseif($v) {
                 print $this->Html->link(_txt('op.view'),
                                         array('controller' => 'co_groups',
-                                              'action'     => 'view',
+                                              'action'     => 'members',
                                               $c['CoGroup']['id']),
                                         array('class'      => 'viewbutton'))
                       . "\n";
@@ -502,15 +502,15 @@
   print $this->element("pagination");
 ?>
 
-<div id="progressbar-dialog" title="<?php print _txt('op.gr.reconcile.all'); ?>">
+<div id="progressbar-dialog" class="co-dialog" title="<?php print _txt('op.gr.reconcile.all'); ?>">
   <p><?php print _txt('op.gr.reconcile.wait'); ?></p>
   <div id="reconcile-progressbar"></div>
 </div>
 
-<div id="reconcile-dialog" title="<?php print _txt('op.gr.reconcile.all'); ?>">
+<div id="reconcile-dialog" class="co-dialog" title="<?php print _txt('op.gr.reconcile.all'); ?>">
   <p><?php print _txt('op.gr.reconcile.all.confirm'); ?></p>
 </div>
 
-<div id="result-dialog" title="<?php print _txt('op.gr.reconcile.all'); ?>">
+<div id="result-dialog" class="co-dialog" title="<?php print _txt('op.gr.reconcile.all'); ?>">
   <p><?php print _txt('rs.gr.reconcile.ok'); ?></p>
 </div>

@@ -677,7 +677,7 @@
                 if($e && !$es && !$g['CoGroup']['auto']) {
                   if($g['member'] || $g['owner']) {
                     print '<li class="field-data-container"><div class="field-data">';
-                    print $this->Html->link($g['CoGroup']['name'], array('controller' => 'co_groups', 'action' => 'edit', $g['co_group_id'], 'co' => $cur_co['Co']['id']));
+                    print $this->Html->link($g['CoGroup']['name'], array('controller' => 'co_groups', 'action' => 'members', $g['co_group_id']));
                     if($g['owner']) {
                       if($g['member']) {
                         print ' ' . _txt('fd.group.grmemown');
